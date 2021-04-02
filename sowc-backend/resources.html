@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Resources</h1>
+    </div>
+    <div class="row">
+        <div class="col-lg-3 col-md-8 col-sm-12">
+            <form onsubmit="event.preventDefault(); onFormSubmit();" id="resources_form">
+                <div class="form-group row">
+                    <label for="title" class="col-sm-12 col-form-label col-form-label-sm">Title:</label>
+
+                    <div class="col-sm-12">
+                        <input type="text" name="title" class="form-control form-control-sm" id="title" placeholder="Enter resource title">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="topic" class="col-sm-12 col-form-label col-form-label-sm">Topic</label>
+                    <div class="col-sm-12">
+                        <select class="custom-select form-control-sm" name="topic" id="topic">
+                        <option selected>Select topic</option>
+                        <option value="Carbon market">Carbon market</option>
+                        <option value="Conservation">Conservation</option>
+                        <option value="Ecotourism">Ecotourism</option>
+                        <option value="Hunting">Hunting</option>
+                        <option value="Non-timber products">Non-timber products</option>
+                        <option value="Socio-economic">Socio-economic</option>
+                        <option value="Wildlife ranching">Wildlife ranching</option>
+                        <option value="Other resources">Other resources</option>
+                    </select>
+                    </div>
+                </div>
+        </div>
+        <div class="col-lg-3 col-md-8 col-sm-12">
+            <div class="form-group row">
+                <label for="author" class="col-sm-12 col-form-label col-form-label-sm">Author(s):</label>
+                <div class="col-sm-12">
+                    <input type="text" name="author" class="form-control form-control-sm" id="author" placeholder="Author(s)">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="publication_date" class="col-sm-12 col-form-label col-form-label-sm">Publication date:</label>
+                <div class="col-sm-12">
+                    <input type="text" name="publication_date" class="form-control form-control-sm" id="publication_date" placeholder="Publication date">
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-8 col-sm-12">
+            <div class="form-group row">
+                <label for="key_words" class="col-sm-12 col-form-label col-form-label-sm">Key words:</label>
+                <div class="col-sm-12">
+                    <input type="text" name="key_words" class="form-control form-control-sm" id="key_words" placeholder="key words">
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="resource_link" class="col-sm-12 col-form-label col-form-label-sm">Resource link:</label>
+                <div class="col-sm-12">
+                    <input type="text" name="resource_link" class="form-control form-control-sm" id="address" placeholder="Resource link">
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-2 col-sm-8">
+            <div class="form-group row">
+                <div class="col-sm-12">
+                    <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+    <div class="col-md-12 col-sm-12">
+        <div class="table-responsive">
+            <table class="table table-striped table-sm" id="resourceslist">
+                <thead>
+                    <tr class="text-center">
+                        <th class="text-center">Resource ID</th>
+                        <th class="text-center">Title</th>
+                        <th class="text-center">Topic</th>
+                        <th class="text-center">Author</th>
+                        <th class="text-center">Publication date</th>
+                        <th class="text-center">Key words</th>
+                        <th class="text-center">Resource link</th>
+                        <th class="text-center">Edit / Delete</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+                    <br>
+                    <!-- Records Go In Here -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    </div>
+
+    <script src="assets/js/jquery-3.3.1.js"></script>
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/js/resource_interface.js"></script>
+</body>
+
+</html>
